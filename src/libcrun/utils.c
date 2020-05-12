@@ -1362,9 +1362,9 @@ run_process_with_stdin_timeout_envp (char *path,
       dup2 (pipe_r, 0);
       TEMP_FAILURE_RETRY (close (pipe_r));
 
-      dup2 (out, 1);
-      dup2 (out, 2);
-      TEMP_FAILURE_RETRY (close (out));
+      // dup2 (out, 1);
+      // dup2 (out, 2);
+      // TEMP_FAILURE_RETRY (close (out));
 
       if (args == NULL)
         args = tmp_args;
